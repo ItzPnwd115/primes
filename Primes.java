@@ -83,24 +83,25 @@ public class Primes
         return prime;
     }
     
-    public static int sumOfPrime(int end)
+    public static long sumOfPrime(int end)
     {
-        int sum = 0;
+        long sum = 0;
+        int found = 0;
         int n = 2;
+        
         boolean isPrime = false;
-        for(int i = 0; i <= end; i++)
+        while(found <= end)
         {
             isPrime = isPrime2(n);
             if(isPrime)
             {
                 sum += n;
                 n++;
-                isPrime = false;
+                found++;
             }
             else
             {
                 n++;
-                i--;
             }
         }
         return sum;
@@ -175,9 +176,9 @@ public class Primes
         // 7. In the set of integers from 2-1000000, how many are prime?
         //Returns 78498
         // 8. What is the sum of the all prime numbers below 1,000,000?
-        //Returns -260641674... OOOF
+        //Returns 7472982453366
         // 9. What is the sum of the first 1000 prime numbers?
-
+        //Returns 3690840
         
     }
     
